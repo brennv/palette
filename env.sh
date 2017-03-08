@@ -43,3 +43,6 @@ bower install
 # [ -f "data.py" ] && python -c "import data; data.load()"
 
 # heroku config:set GENERIC_SECRET=$GENERIC_SECRET
+# heroku buildpacks:set heroku/python
+# heroku buildpacks:add --index 1 heroku/nodejs
+# git push heroku master
