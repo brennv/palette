@@ -55,7 +55,6 @@ keys.sh
 
 # Data
 *.db
-migrations/
 *data.py
 
 .cache/
