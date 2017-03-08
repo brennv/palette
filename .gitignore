@@ -57,3 +57,5 @@ keys.sh
 *.db
 migrations/
 *data.py
+
+.cache/
