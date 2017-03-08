@@ -1,0 +1,20 @@
+
+{% extends "layout.html" %}
+
+{% block page_title %}{{ super() }} Contact {% endblock %}
+
+<!--
+{% block css %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/contact.css') }}">
+{% endblock %}
+-->
+
+{% block content %}
+<div class="body-content">
+  <div class="row">
+    <h1>Contact us</h1>
+    <p>Send us a note.</p>
+  </div>
+</div>
+{% endblock %}

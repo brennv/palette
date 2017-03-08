@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block page_title %}{{ super() }} home {% endblock %}
+
+{% block css %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+
+{% block header %}
+<!-- Full Width Image Header -->
+<div class="header-image">
+  <div class="headline">
+    <h3>Welcome to generic</h3>
+    <p><a href="https://github.com/brennv/generic" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+
+  <div class="featurette-divider"></div>
+
+  <!-- First Featurette -->
+  <div class="featurette" id="about">
+    <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/400x400/ccc/ccc">
+    <h2 class="featurette-heading">This First Heading
+      <span class="text-muted">Will Catch Your Eye</span>
+    </h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- Second Featurette -->
+  <div class="featurette" id="services">
+    <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/400x400/ccc/ccc">
+    <h2 class="featurette-heading">The Second Heading
+      <span class="text-muted">Is Pretty Cool Too.</span>
+    </h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- Third Featurette -->
+  <div class="featurette" id="contact">
+    <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/400x400/ccc/ccc">
+    <h2 class="featurette-heading">The Third Heading
+      <span class="text-muted">Will Seal the Deal.</span>
+    </h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row follow-up">
+    <div class="col-lg-4">
+    <h2><i class="fa fa-code"></i> Bootstrap 3</h2>
+    <p>Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</p>
+    <p><a class="btn btn-default" href="http://getbootstrap.com/">Official website &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+    <h2><i class="fa fa-flask"></i> SQLAlchemy</h2>
+    <p>SQLAlchemy is a Python SQL toolkit and Object Relational Mapper.</p>
+    <p><a href="http://www.sqlalchemy.org/" class="btn btn-default">Official website &raquo;</a></p>
+   </div>
+    <div class="col-lg-4">
+    <h2><i class="fa fa-edit"></i> WTForms</h2>
+    <p>WTForms is a flexible forms validation and rendering library for python web development.</p>
+    <p><a href="http://wtforms.simplecodes.com/" class="btn btn-default">Official website &raquo;</a></p>
+    </div>
+  </div><!-- /.row -->
+
+  <div class="featurette-divider"></div>
+
+</div>
+<!-- /.container -->
+{% endblock %}

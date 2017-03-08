@@ -1,0 +1,26 @@
+<h1>Messages</h1>
+<br/>
+<form id="registerForm" class="form form-register" method="POST" action="" role="form">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+  <div class="form-group">
+    {{form.username.label}}
+    {{form.username(placeholder="Username", class_="form-control")}}
+  </div>
+
+  <div class="form-group">
+    {{form.password.label}}
+    {{form.password(placeholder="Password", class_="form-control")}}
+  </div>
+
+  <div class="form-group">
+    {{form.username.label}}
+    {{form.username(placeholder="Username", class_="form-control")}}
+  </div>
+
+  <div class="form-group">
+    {{form.password(placeholder="Send message", class_="form-control")}}
+    <input class="btn btn-default btn-submit" type="submit" value="Register">
+  </div>
+
+</form>

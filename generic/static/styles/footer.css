@@ -1,0 +1,26 @@
+.footer {
+  display: block;
+  width: 100%;
+  /* background: url('http://placehold.it/1900x300/ccc/ccc') no-repeat center center scroll; */
+  background-color: #ccc;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+  text-align: center;
+  margin-top: 100px;
+  /* height: 300px; */
+  padding: 60px;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: 0;
+  color: #ffffff;
+}

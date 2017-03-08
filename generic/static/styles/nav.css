@@ -1,0 +1,35 @@
+.navbar {
+  background: 0;
+  border: 0;
+}
+
+.navbar-fixed-top {
+  position: absolute!important;
+}
+
+.navbar-toggle {
+  border: 0;
+}
+
+/*
+button.navbar-toggle:hover, button.navbar-toggle:active {
+  color: red !important;
+} */
+
+/*
+@media(max-width:1025px) {
+  .navbar-form {
+    margin-right: : 50px;
+  }
+} */
+
+@media(max-width:768px) {
+  .navbar {
+    background: #ccc;
+  }
+
+  /*
+  .navbar-collapse.navbar-ex1-collapse.collapse.in {
+    background: #ccc;
+  } */
+}
