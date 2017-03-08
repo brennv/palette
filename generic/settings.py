@@ -49,3 +49,4 @@ class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite://'
     BCRYPT_LOG_ROUNDS = 4  # For faster tests; needs at least 4 to avoid "ValueError: Invalid rounds"
     WTF_CSRF_ENABLED = False  # Allows form testing
+    PRESERVE_CONTEXT_ON_EXCEPTION = False  # For http://stackoverflow.com/a/28139033
