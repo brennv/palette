@@ -7,7 +7,6 @@ A generic flask app for templating.
 Features:
 
 - user login and authentication
-- user to user commerce & messaging
 - mobile friendly
 - customizable styling
 
