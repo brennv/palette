@@ -41,3 +41,5 @@ bower install
 
 # Load data if found
 # [ -f "data.py" ] && python -c "import data; data.load()"
+
+# heroku config:set GENERIC_SECRET=$GENERIC_SECRET
