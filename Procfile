@@ -1,1 +1,1 @@
-web: gunicorn generic.app:create_app\(\) -w 3
+web: flask run
