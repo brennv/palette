@@ -4,6 +4,8 @@ generic
 
 A generic flask app for templating.
 
+Preview the app is on Heroku_.
+
 Features:
 
 - user login and authentication
@@ -86,4 +88,5 @@ Origins
 cookiecutter-flask_
 
 
+.. _Heroku: https://calm-brushlands-54236.herokuapp.com/
 .. _cookiecutter-flask: https://github.com/sloria/cookiecutter-flask
