@@ -4,7 +4,7 @@ generic
 
 A generic flask app for templating.
 
-Preview the app is on Heroku_.
+Preview the app on Heroku_.
 
 Features:
 
