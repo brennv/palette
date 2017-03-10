@@ -18,12 +18,8 @@ logger = logging.getLogger('alembic.env')
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 from flask import current_app
-
-### begin patch
-SQLALCHEMY_DATABASE_URI = current_app.config.get('SQLALCHEMY_DATABASE_URI')
-config.set_main_option('sqlalchemy.url', SQLALCHEMY_DATABASE_URI)
-### end patch
-
+config.set_main_option('sqlalchemy.url',
+                       current_app.config.get('SQLALCHEMY_DATABASE_URI'))
 target_metadata = current_app.extensions['migrate'].db.metadata
 
 # other values from the config, defined by the needs of env.py,
@@ -74,20 +70,10 @@ def run_migrations_online():
                                 poolclass=pool.NullPool)
 
     connection = engine.connect()
-
-    ### begin patch
-    if 'sqlite' in SQLALCHEMY_DATABASE_URI:
-        context.configure(connection=connection,
-                          target_metadata=target_metadata,
-                          process_revision_directives=process_revision_directives,
-                          render_as_batch=True,
-                          **current_app.extensions['migrate'].configure_args)
-    else:
-        context.configure(connection=connection,
-                          target_metadata=target_metadata,
-                          process_revision_directives=process_revision_directives,
-                          **current_app.extensions['migrate'].configure_args)
-    ### end patch
+    context.configure(connection=connection,
+                      target_metadata=target_metadata,
+                      process_revision_directives=process_revision_directives,
+                      **current_app.extensions['migrate'].configure_args)
 
     try:
         with context.begin_transaction():

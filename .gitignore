@@ -54,6 +54,7 @@ venv/
 keys.sh
 
 # Data
+db
 *.db
 *data.py
 

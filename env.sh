@@ -32,8 +32,10 @@ source env/bin/activate
 bower install
 
 # Create migrations/ if not found
-[ ! -d "migrations" ] && flask db init && \
-  yes | cp -rf hacks/env.py migrations/env.py  # for batch patch
+# mkdir db
+# docker run -td -p 5432:5432 -v $(pwd)/db:/var/lib/postgresql/data postgres:9.6.1
+# [ ! -d "migrations" ] && flask db init  # && \
+#   yes | cp -rf hacks/env.py migrations/env.py  # for batch patch
 
 # Sync models with db
 # flask db migrate
@@ -42,9 +44,14 @@ bower install
 # Load data if found
 # [ -f "data.py" ] && python -c "import data; data.load()"
 
+
+
 # heroku config:set GENERIC_SECRET=$GENERIC_SECRET
 # heroku buildpacks:set heroku/python
 # heroku buildpacks:add --index 1 heroku/nodejs
 # git push heroku master
 # heroku logs
 # heroku run pwd
+# heroku config:set FLASK_APP=/app/autoapp.py
+# heroku run flask db migrate
+# heroku run flask db upgrade
