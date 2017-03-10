@@ -33,7 +33,7 @@
 {% endwith %}
 
 {% assets "js_all" %}
-  <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+  <script type="text/javascript" src="{{ ASSET_URL }}"></script>      <!-- not sure -->
   <script type="text/javascript" src="{{ url_for('static', filename='libs/bootstrap-growl/jquery.bootstrap-growl.min.js') }}"></script>
 {% endassets %}
 {% block js %}{% endblock %}

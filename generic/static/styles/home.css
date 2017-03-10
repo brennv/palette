@@ -1,7 +1,7 @@
 .header-image {
   display: block;
   width: 100%;
-  background: url('http://placehold.it/1900x640/ccc/ccc') no-repeat center center scroll;
+  background: url('https://placehold.it/1900x640/ccc/ccc') no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
