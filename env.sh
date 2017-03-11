@@ -49,6 +49,9 @@ flask assets build
 # heroku buildpacks:set heroku/python
 # heroku buildpacks:add --index 2 heroku/nodejs
 # heroku addons:create heroku-postgresql:hobby-dev  # sets DATABASE_URL
+  # heroku addons:create trevor:test
+  # heroku addons:create scheduler:standard
+  # heroku addons:create logentries:le_tryit
 # git push heroku master
 # heroku logs
 # heroku run flask db upgrade
