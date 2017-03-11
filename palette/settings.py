@@ -24,7 +24,7 @@ class ProdConfig(Config):
 
     ENV = 'prod'
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     DEBUG_TB_ENABLED = False  # Disable Debug toolbar
 
 
@@ -34,8 +34,7 @@ class DevConfig(Config):
     ENV = 'dev'
     DEBUG = True
     FALLBACK_URI = 'sqlite:///' + os.path.join(Config.PROJECT_ROOT, '_dev.db')
-    SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI',
-                                             FALLBACK_URI)
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', FALLBACK_URI)
     DEBUG_TB_ENABLED = True
     ASSETS_DEBUG = True  # Don't bundle/minify static assets
     CACHE_TYPE = 'simple'  # Can be "memcached", "redis", etc.

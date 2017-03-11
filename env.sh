@@ -1,18 +1,15 @@
 #!/bin/sh
-
-### Configure environment
-
 # Set environment variables
 export FLASK_DEBUG=1  # 0 for prod, 1 for dev
 echo "FLASK_DEBUG: $FLASK_DEBUG"
-
-export FLASK_APP="$(pwd)/autoapp.py"  # relative reference
+export FLASK_APP="$(pwd)/autoapp.py"
 echo "FLASK_APP: $FLASK_APP"
 
 # Create keys.sh if not found
 [ ! -f "keys.sh" ] && cat > keys.sh <<- EOM
 export PALETTE_SECRET="super-secret"  # TODO change
-export SQLALCHEMY_DATABASE_URI="sqlite:///$(pwd)/dev.db"
+export DATABASE_URL="postgresql://postgres:postgres@localhost/postgres"
+# export DATABASE_URL="sqlite:///$(pwd)/dev.db"
 EOM
 
 # Set environment secrets
@@ -32,8 +29,8 @@ source env/bin/activate
 bower install
 flask assets build
 
-# Create migrations/ if not found
-# mkdir db
+# Create db/ & migrations/ if not found
+# [ ! -d "migrations" ] && mkdir db
 # docker run -td -p 5432:5432 -v $(pwd)/db:/var/lib/postgresql/data postgres:9.6.1
 # [ ! -d "migrations" ] && flask db init  # && \
 #   yes | cp -rf hacks/env.py migrations/env.py  # for batch patch
@@ -45,13 +42,13 @@ flask assets build
 # Load data if found
 # [ -f "data.py" ] && python -c "import data; data.load()"
 
-
+# heroku login
+# heroku apps:create palette-dev
 # heroku config:set PALETTE_SECRET=$PALETTE_SECRET
+# heroku config:set FLASK_APP=/app/autoapp.py
 # heroku buildpacks:set heroku/python
 # heroku buildpacks:add --index 2 heroku/nodejs
+# heroku addons:create heroku-postgresql:hobby-dev  # sets DATABASE_URL
 # git push heroku master
 # heroku logs
-# heroku run pwd
-# heroku config:set FLASK_APP=/app/autoapp.py
 # heroku run flask db upgrade
-# heroku run flask assets build
