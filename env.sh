@@ -41,17 +41,3 @@ flask assets build
 
 # Load data if found
 # [ -f "data.py" ] && python -c "import data; data.load()"
-
-# heroku login
-# heroku apps:create palette-dev
-# heroku config:set PALETTE_SECRET=$PALETTE_SECRET
-# heroku config:set FLASK_APP=/app/autoapp.py
-# heroku buildpacks:set heroku/python
-# heroku buildpacks:add --index 2 heroku/nodejs
-# heroku addons:create heroku-postgresql:hobby-dev  # sets DATABASE_URL
-  # heroku addons:create trevor:test
-  # heroku addons:create scheduler:standard
-  # heroku addons:create logentries:le_tryit
-# git push heroku master
-# heroku logs
-# heroku run flask db upgrade
