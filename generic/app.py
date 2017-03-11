@@ -3,6 +3,7 @@
 from flask import Flask, render_template
 
 from generic import commands, public, user
+from generic import blog, shop
 from generic.assets import assets
 from generic.extensions import bcrypt, cache, csrf_protect, db, \
     debug_toolbar, login_manager, migrate  # , security  #
@@ -46,6 +47,8 @@ def register_blueprints(app):
     """Register Flask blueprints."""
     app.register_blueprint(public.views.blueprint)
     app.register_blueprint(user.views.blueprint)
+    app.register_blueprint(blog.views.blueprint)
+    app.register_blueprint(shop.views.blueprint)
     return None
 
 

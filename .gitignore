@@ -43,9 +43,6 @@ docs/_build
 # Mac
 .DS_Store
 
-# Static assets
-.webassets-cache
-
 # Virtualenvs
 env/
 venv/
@@ -54,7 +51,7 @@ venv/
 keys.sh
 
 # Data
-db
+db/
 *.db
 *data.py
 

@@ -87,50 +87,8 @@ def about():
     return render_template('public/about.html', form=form)
 
 
-@blueprint.route('/find/')
-def find():
-    """Find item."""
-    form = LoginForm(request.form)
-    return render_template('public/find.html', form=form)
-
-
-@blueprint.route('/item/')
-def item():
-    """item page."""
-    form = LoginForm(request.form)
-    return render_template('public/item.html', form=form)
-
-
 @blueprint.route('/contact/')
 def contact():
     """Contact info."""
     form = LoginForm(request.form)
     return render_template('public/contact.html', form=form)
-
-
-@blueprint.route('/blog/')
-def blog():
-    """Blog page."""
-    form = LoginForm(request.form)
-    return render_template('public/blog.html', form=form)
-
-
-@blueprint.route('/blog/post/1')
-def post1():
-    """Blog post page."""
-    form = LoginForm(request.form)
-    return render_template('public/blog-post-1.html', form=form)
-
-
-@blueprint.route('/blog/post/2')
-def post2():
-    """Blog post page."""
-    form = LoginForm(request.form)
-    return render_template('public/blog-post-2.html', form=form)
-
-
-@blueprint.route('/blog/post/3')
-def post3():
-    """Blog post page."""
-    form = LoginForm(request.form)
-    return render_template('public/blog-post-3.html', form=form)

@@ -1,0 +1,7 @@
+.webassets-cache
+css/*.css
+js/*.js
+libs/bootstrap/*
+libs/bootstrap-growl/*
+libs/font-awesome/*
+libs/jQuery/*
