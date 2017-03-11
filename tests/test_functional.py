@@ -74,9 +74,9 @@ class TestRegistering:
         """Register a new user."""
         old_count = len(User.query.all())
         # Goes to homepage
-        res = testapp.get('/')
+        res = testapp.get('/register/')
         # Clicks Create Account button
-        res = res.click('Create account')
+        # res = res.click('Create account')
         # Fills out the form
         form = res.forms['registerForm']
         form['username'] = 'foobar'
