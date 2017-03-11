@@ -26,6 +26,7 @@ source env/bin/activate
 [ $FLASK_DEBUG = 0 ] && pip install -r requirements/prod.txt
 
 # Install abd bundle assets
+npm install bower
 bower install
 flask assets build
 

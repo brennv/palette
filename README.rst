@@ -1,3 +1,7 @@
+.. image:: https://travis-ci.org/brennv/palette.svg?branch=master
+    :target: https://travis-ci.org/brennv/palette
+
+
 ===============================
 palette
 ===============================
