@@ -4,7 +4,7 @@ from flask_assets import Bundle, Environment
 
 css = Bundle(
     'libs/bootstrap/dist/css/bootstrap.css',
-    'libs/font-awesome/css/font-awesome.css',
+    # 'libs/font-awesome/css/font-awesome.css',  # doesn't pull fonts
     'css/style.css',
     'css/footer.css',
     'css/layout.css',

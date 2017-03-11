@@ -48,11 +48,10 @@ flask assets build
 
 # heroku config:set GENERIC_SECRET=$GENERIC_SECRET
 # heroku buildpacks:set heroku/python
-# heroku buildpacks:add --index 1 heroku/nodejs
+# heroku buildpacks:add --index 2 heroku/nodejs
 # git push heroku master
 # heroku logs
 # heroku run pwd
 # heroku config:set FLASK_APP=/app/autoapp.py
 # heroku run flask db upgrade
-# heroku run bower install
 # heroku run flask assets build
