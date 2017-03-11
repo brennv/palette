@@ -55,4 +55,6 @@ db/
 *.db
 *data.py
 
+# Extras
 .cache/
+node_modules/
