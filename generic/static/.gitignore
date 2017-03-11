@@ -1,7 +1,7 @@
 .webassets-cache
 
-bundle/common.css
-bundle/common.js
+# bundle/common.css
+# bundle/common.js
 
 libs/bootstrap/*
 libs/bootstrap-growl/*
