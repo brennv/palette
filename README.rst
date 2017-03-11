@@ -3,16 +3,14 @@
 .. image:: https://requires.io/github/brennv/palette/requirements.svg?branch=master
     :target: https://requires.io/github/brennv/palette/requirements/?branch=master
 .. image:: https://img.shields.io/pypi/pyversions/Django.svg
-    :target: https://img.shields.io/pypi/pyversions/Django.svg
 .. image:: https://img.shields.io/badge/node-6.10.0-blue.svg
-    :target: https://img.shields.io/badge/node-6.10.0-blue.svg 
 
 
 ===============================
 palette
 ===============================
 
-A palette flask app for templating.
+A modular flask app template.
 
 Preview the app on Heroku_.
 
@@ -20,7 +18,7 @@ Features:
 
 - user login and authentication
 - mobile friendly
-- customizable styling
+- modular components: blog, shop
 
 
 Quickstart

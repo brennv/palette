@@ -26,8 +26,10 @@ class LoginForm(Form):
 
         self.user = User.query.filter_by(username=self.username.data).first()
         if not self.user:
-            self.username.errors.append('Unknown username')
-            return False
+            self.user = User.query.filter_by(email=self.username.data).first()
+            if not self.user:
+                self.username.errors.append('Unknown username or email')
+                return False
 
         if not self.user.check_password(self.password.data):
             self.password.errors.append('Invalid password')

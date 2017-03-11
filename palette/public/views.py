@@ -41,20 +41,17 @@ def home():
 @blueprint.route('/login/', methods=['GET', 'POST'])
 def login():
     """Log in."""
-    # login_user()
-    # flash('You are logged out.', 'info')
     form = LoginForm(request.form)
     # Handle logging in
     if request.method == 'POST':
         if form.validate_on_submit():
-            login_user(form.user)
+            login_user(form.user, remember=True)
             flash('You are logged in.', 'success')
             redirect_url = request.args.get('next') or url_for('user.members')
             return redirect(redirect_url)
         else:
             flash_errors(form)
     return render_template('public/login.html', form=form)
-    # return redirect(url_for('public.login'))
 
 
 @blueprint.route('/logout/')
