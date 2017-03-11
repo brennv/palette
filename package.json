@@ -1,5 +1,5 @@
 {
-  "name": "generic",
+  "name": "palette",
   "version": "1.0.0",
   "dependencies": {
     "bower": "~1.8"

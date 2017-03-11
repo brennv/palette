@@ -5,10 +5,10 @@ from flask import Blueprint, flash, redirect, render_template, request, url_for
 # from flask_security import login_required, login_user, logout_user
 from flask_login import login_required, login_user, logout_user
 
-from generic.extensions import login_manager
-from generic.public.forms import LoginForm
-# from generic.user.models import User
-from generic.utils import flash_errors
+from palette.extensions import login_manager
+from palette.public.forms import LoginForm
+# from palette.user.models import User
+from palette.utils import flash_errors
 
 blueprint = Blueprint('shop', __name__, static_folder='../static')
 

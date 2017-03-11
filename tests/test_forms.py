@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Test forms."""
 
-from generic.public.forms import LoginForm
-from generic.user.forms import RegisterForm
+from palette.public.forms import LoginForm
+from palette.user.forms import RegisterForm
 
 
 class TestRegisterForm:

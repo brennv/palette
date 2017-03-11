@@ -7,3 +7,9 @@ a:hover, a:focus {
   outline: 0;
   color: #000000 !important;
 }
+
+.bootstrap-growl {
+  color: #777777;
+  background-color: #eeeeee;
+  border-color: #b9c7d2;
+}

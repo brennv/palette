@@ -5,8 +5,8 @@ import datetime as dt
 # from flask_security import UserMixin, RoleMixin, SQLAlchemyUserDatastore
 from flask_login import UserMixin
 
-from generic.database import Column, Model, SurrogatePK, db, reference_col, relationship
-from generic.extensions import bcrypt
+from palette.database import Column, Model, SurrogatePK, db, reference_col, relationship
+from palette.extensions import bcrypt
 
 
 class Role(SurrogatePK, Model):  # RoleMixin

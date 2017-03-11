@@ -2,8 +2,8 @@
 """Create an application instance."""
 from flask.helpers import get_debug_flag
 
-from generic.app import create_app
-from generic.settings import DevConfig, ProdConfig
+from palette.app import create_app
+from palette.settings import DevConfig, ProdConfig
 
 
 CONFIG = DevConfig if get_debug_flag() else ProdConfig

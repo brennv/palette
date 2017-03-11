@@ -11,7 +11,7 @@ echo "FLASK_APP: $FLASK_APP"
 
 # Create keys.sh if not found
 [ ! -f "keys.sh" ] && cat > keys.sh <<- EOM
-export GENERIC_SECRET="super-secret"  # TODO change
+export PALETTE_SECRET="super-secret"  # TODO change
 export SQLALCHEMY_DATABASE_URI="sqlite:///$(pwd)/dev.db"
 EOM
 
@@ -46,7 +46,7 @@ flask assets build
 # [ -f "data.py" ] && python -c "import data; data.load()"
 
 
-# heroku config:set GENERIC_SECRET=$GENERIC_SECRET
+# heroku config:set PALETTE_SECRET=$PALETTE_SECRET
 # heroku buildpacks:set heroku/python
 # heroku buildpacks:add --index 2 heroku/nodejs
 # git push heroku master

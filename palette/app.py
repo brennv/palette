@@ -2,15 +2,15 @@
 """The app module, containing the app factory function."""
 from flask import Flask, render_template
 
-from generic import commands, public, user
-from generic import blog, shop
-from generic.assets import assets
-from generic.extensions import bcrypt, cache, csrf_protect, db, \
+from palette import commands, public, user
+from palette import blog, shop
+from palette.assets import assets
+from palette.extensions import bcrypt, cache, csrf_protect, db, \
     debug_toolbar, login_manager, migrate  # , security  #
-from generic.settings import ProdConfig
+from palette.settings import ProdConfig
 
 # from flask_security import Security  #
-# from generic.user.models import user_datastore  #
+# from palette.user.models import user_datastore  #
 
 
 def create_app(config_object=ProdConfig):

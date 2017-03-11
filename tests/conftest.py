@@ -4,9 +4,9 @@
 import pytest
 from webtest import TestApp
 
-from generic.app import create_app
-from generic.database import db as _db
-from generic.settings import TestConfig
+from palette.app import create_app
+from palette.database import db as _db
+from palette.settings import TestConfig
 
 from .factories import UserFactory
 

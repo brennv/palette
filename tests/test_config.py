@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Test configs."""
-from generic.app import create_app
-from generic.settings import DevConfig, ProdConfig
+from palette.app import create_app
+from palette.settings import DevConfig, ProdConfig
 
 
 def test_production_config():

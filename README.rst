@@ -1,8 +1,8 @@
 ===============================
-generic
+palette
 ===============================
 
-A generic flask app for templating.
+A palette flask app for templating.
 
 Preview the app on Heroku_.
 
@@ -18,8 +18,8 @@ Quickstart
 
 Run the following commands to bootstrap your environment ::
 
-    git clone https://github.com/brennv/generic
-    cd generic
+    git clone https://github.com/brennv/palette
+    cd palette
     source env.sh
     flask run
 

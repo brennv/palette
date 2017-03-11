@@ -135,7 +135,7 @@ def urls(url, order):
 
 
 @click.command()
-def powermode(path='generic/', recursive=True):
+def powermode(path='palette/', recursive=True):
     """Hot reload tests and db schema."""
     schema_patterns = ["*models.py"]
     tests_ignore_patterns = ["*__pycache__", "*.webassets-cache"]

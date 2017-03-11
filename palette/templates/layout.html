@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{% block page_title %} generic {% endblock %}</title>
+  <title>{% block page_title %} palette {% endblock %}</title>
   <meta name="description" content="{% block meta_description %}{% endblock %}">
   <meta name="author" content="{% block meta_author %}{% endblock %}">
 
@@ -47,14 +47,14 @@
     {% endassets %}
 
     {% block js %}
-    
+
       {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
           {% for category, message in messages %}
             <script type="text/javascript">
               $.bootstrapGrowl( "{{ message }}   ", {
                 ele: 'body',
-                type: '{{ category }}',
+                // type: 'info',  // '{{ category }}',
                 offset: {from: 'top', amount: 60},
                 align: 'right',
                 width: 'auto',
