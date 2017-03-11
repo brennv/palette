@@ -2,3 +2,9 @@
 
 bundle/common.css
 bundle/common.js
+
+libs/bootstrap/*
+libs/bootstrap-growl/*
+libs/font-awesome/*
+libs/jQuery/*
+libs/jquery/*
