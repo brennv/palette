@@ -15,8 +15,10 @@
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
 
+  <!--
   <link rel="stylesheet" href="{{ url_for('static', filename='libs/font-awesome/css/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/layout.css') }}">
+  -->
 
   {% assets "css_all" %}
     <link rel="stylesheet" href="{{ ASSET_URL }}">
@@ -33,8 +35,10 @@
 {% endwith %}
 
 {% assets "js_all" %}
-  <script type="text/javascript" src="{{ ASSET_URL }}"></script>      <!-- not sure -->
+  <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+  <!-- not sure
   <script type="text/javascript" src="{{ url_for('static', filename='libs/bootstrap-growl/jquery.bootstrap-growl.min.js') }}"></script>
+  -->
 {% endassets %}
 {% block js %}{% endblock %}
 

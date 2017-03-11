@@ -4,10 +4,13 @@ from flask_assets import Bundle, Environment
 
 css = Bundle(
     'libs/bootstrap/dist/css/bootstrap.css',
-    # 'libs/font-awesome4/css/font-awesome.css',
+    'libs/font-awesome/css/font-awesome.css',
     'css/style.css',
+    'css/footer.css',
+    'css/layout.css',
+    'css/nav.css',
     filters='cssmin',
-    output='public/css/common.css'
+    output='public/bundle/common.css'
 )
 
 js = Bundle(
@@ -16,7 +19,7 @@ js = Bundle(
     'libs/bootstrap-growl/jquery.bootstrap-growl.js',
     'js/plugins.js',
     filters='jsmin',
-    output='public/js/common.js'
+    output='public/bundle/common.js'
 )
 
 assets = Environment()

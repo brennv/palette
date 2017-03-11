@@ -28,8 +28,9 @@ source env/bin/activate
 [ $FLASK_DEBUG = 1 ] && pip install -r requirements/dev.txt
 [ $FLASK_DEBUG = 0 ] && pip install -r requirements/prod.txt
 
-# Install web assets
+# Install abd bundle assets
 bower install
+flask assets build
 
 # Create migrations/ if not found
 # mkdir db
@@ -45,7 +46,6 @@ bower install
 # [ -f "data.py" ] && python -c "import data; data.load()"
 
 
-
 # heroku config:set GENERIC_SECRET=$GENERIC_SECRET
 # heroku buildpacks:set heroku/python
 # heroku buildpacks:add --index 1 heroku/nodejs
@@ -53,5 +53,6 @@ bower install
 # heroku logs
 # heroku run pwd
 # heroku config:set FLASK_APP=/app/autoapp.py
-# heroku run flask db migrate
 # heroku run flask db upgrade
+# heroku run bower install
+# heroku run flask assets build
