@@ -1,10 +1,9 @@
 .. image:: https://travis-ci.org/brennv/palette.svg?branch=master
     :target: https://travis-ci.org/brennv/palette
-
-.. image:: https://img.shields.io/pypi/pyversions/Django.svg   :target:
-
-.. image:: https://img.shields.io/badge/node-6.10.0-blue.svg   :target:
-
+.. image:: https://img.shields.io/pypi/pyversions/Django.svg
+    :target:
+.. image:: https://img.shields.io/badge/node-6.10.0-blue.svg
+    :target:
 .. image:: https://requires.io/github/brennv/palette/requirements.svg?branch=master
      :target: https://requires.io/github/brennv/palette/requirements/?branch=master
 
