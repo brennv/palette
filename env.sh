@@ -34,7 +34,7 @@ flask assets build
 # [ ! -d "migrations" ] && mkdir db
 # docker run -td -p 5432:5432 -v $(pwd)/db:/var/lib/postgresql/data postgres:9.6.1
 # [ ! -d "migrations" ] && flask db init  # && \
-#   yes | cp -rf hacks/env.py migrations/env.py  # for batch patch
+#   yes | cp -rf utils/env.py migrations/env.py  # for batch patch
 
 # Sync models with db
 # flask db migrate

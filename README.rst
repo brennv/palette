@@ -98,5 +98,5 @@ Origins
 cookiecutter-flask_
 
 
-.. _Heroku: https://calm-brushlands-54236.herokuapp.com/
+.. _Heroku: https://palette-dev.herokuapp.com/
 .. _cookiecutter-flask: https://github.com/sloria/cookiecutter-flask

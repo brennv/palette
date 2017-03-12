@@ -55,6 +55,6 @@ db/
 *.db
 *data.py
 
-# Extras
+# Misc
 .cache/
-node_modules/
+gists/
