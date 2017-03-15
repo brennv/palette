@@ -72,6 +72,3 @@ class User(UserMixin, SurrogatePK, Model):
     def __repr__(self):
         """Represent instance as a unique string."""
         return '<User({username!r})>'.format(username=self.username)
-
-
-# user_datastore = SQLAlchemyUserDatastore(db, User, Role)

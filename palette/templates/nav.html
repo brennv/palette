@@ -30,7 +30,7 @@
     {% if current_user and current_user.is_authenticated %}
     <ul class="nav navbar-nav navbar-right">
 
-        <li><a class="navbar-link" href="{{ url_for('user.share') }}">Share items</a></li>
+        <li><a class="navbar-link" href="{{ url_for('shop.share') }}">Share items</a></li>
 
         <li><a class="navbar-link" href="{{ url_for('user.members') }}"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{ current_user.username }}</a></li>
 
