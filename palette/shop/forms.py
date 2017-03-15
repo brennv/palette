@@ -1,41 +1,28 @@
 # -*- coding: utf-8 -*-
 """Shop forms."""
 from flask_wtf import Form
-from wtforms import PasswordField, StringField
+from wtforms import StringField  # , DecimalField  # , IntegerField
 from wtforms.validators import DataRequired
 
-# from palette.user.models import User
+from palette.shop.models import Item
 
-'''
-class LoginForm(Form):
-    """Login form."""
 
-    username = StringField('Username', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
+class ItemForm(Form):
+    """Item form."""
+    name = StringField('Name', validators=[DataRequired()])
+    description = StringField('Description')
+    terms = StringField('Terms')
+    price = StringField('Price')
 
     def __init__(self, *args, **kwargs):
         """Create instance."""
-        super(LoginForm, self).__init__(*args, **kwargs)
-        self.user = None
+        super(ItemForm, self).__init__(*args, **kwargs)
+        self.item = None
 
     def validate(self):
         """Validate the form."""
-        initial_validation = super(LoginForm, self).validate()
+        initial_validation = super(ItemForm, self).validate()
         if not initial_validation:
             return False
 
-        self.user = User.query.filter_by(username=self.username.data).first()
-        if not self.user:
-            self.username.errors.append('Unknown username')
-            return False
-
-        if not self.user.check_password(self.password.data):
-            self.password.errors.append('Invalid password')
-            return False
-
-        if not self.user.active:
-            self.username.errors.append('User not activated')
-            return False
         return True
-
-'''

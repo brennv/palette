@@ -14,15 +14,6 @@ def members():
     """List members."""
     return render_template('users/members.html')
 
-
-@blueprint.route('/share/')
-@login_required
-def share():
-    """Share items page."""
-    # form = LoginForm(request.form)
-    return render_template('users/share.html')  # , form=form)
-
-
 @blueprint.route('/reservation/')
 @login_required
 def reservation():
