@@ -19,6 +19,6 @@ heroku addons:create logentries:le_tryit
 heroku addons:create papertrail:choklad
 
 # Deploy, configure, monitor
-git push heroku master
+git push heroku master  # dev:master
 heroku run flask db upgrade
 heroku logs --tail
