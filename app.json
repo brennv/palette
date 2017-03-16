@@ -1,0 +1,32 @@
+{
+  "name": "palette",
+  "scripts": {
+  },
+  "env": {
+    "FLASK_APP": {
+      "required": true
+    },
+    "PALETTE_SECRET": {
+      "required": true
+    },
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "papertrail",
+    "heroku-postgresql",
+    "scheduler",
+    "trevor"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
